@@ -12,3 +12,4 @@ source_url 'https://github.com/codenamephp/chef.cookbook.apache2' if respond_to?
 supports 'debian', '~>9.1'
 
 depends 'apt'
+depends 'apache2', '~> 5.0.1'

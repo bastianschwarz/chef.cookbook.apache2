@@ -7,14 +7,25 @@
 require 'spec_helper'
 
 describe 'chef.cookbook.apache2::default' do
-  context 'When all attributes are default, on an Ubuntu 16.04' do
+  context 'When all attributes are default' do
     let(:chef_run) do
       runner = ChefSpec::SoloRunner.new
       runner.converge(described_recipe)
     end
 
+    before do
+      stub_command("/usr/sbin/apache2 -t").and_return(true)
+    end
+
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
+    end
+
+    it 'includes apt recipe' do
+      expect(chef_run).to include_recipe('apt')
+    end
+    it 'includes apache2 recipe' do
+      expect(chef_run).to include_recipe('apache2')
     end
   end
 end

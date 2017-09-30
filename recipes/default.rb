@@ -7,4 +7,6 @@
 include_recipe 'apt'
 include_recipe 'apache2'
 
-apache_site "default-ssl"
+if node['apache']['default_site_enabled'] == true
+  apache_site "default-ssl"
+end

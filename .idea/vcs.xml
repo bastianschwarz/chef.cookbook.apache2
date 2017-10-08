@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../chef.cookbook.dev" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../chef.cookbook.docker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../chef.cookbook.jenkins" vcs="Git" />
   </component>
 </project>

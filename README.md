@@ -19,7 +19,7 @@ Cookbook to install apache2 as a wrapper coockbook for [Apache2][apache2_github]
 Add the cookbook to your Berksfile:
 
 ```
-cookbook 'chef.cookbook.apache2', :github 'codenamephp/chef.cookbook.apache2'
+cookbook 'codenamephp_apache2, :github 'codenamephp/chef.cookbook.apache2'
 ```
 
 Add the cookbook to your runlist, e.g. in a role:
@@ -33,7 +33,7 @@ add the corresponding `apache2::*` cookbooks for that module
   "chef_type": "role",
   "json_class": "Chef::Role",
   "run_list": [
-	  "recipe[chef.cookbook.apache2]"
+	  "recipe[codenamephp_apache2]"
   ]
 }
 ```
@@ -43,6 +43,6 @@ add the corresponding `apache2::*` cookbooks for that module
 #### Overwrites
 
 By default, the `default['apache']['listen']` is set to `['*:80', '*:443']` to listen to both http and https
-and therefore `default['apache']['default_modules']` is extend with `['ssl']` so mod_ssl module is activated by default.
+and therefore `default['apache']['default_modules']` is extended with `['ssl']` so mod_ssl module is activated by default.
 
 [apache2_github]: https://github.com/sous-chefs/apache2

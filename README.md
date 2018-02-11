@@ -1,4 +1,5 @@
 # Chef Cookbook Apache2
+[![Build Status](https://travis-ci.org/codenamephp/chef.cookbook.apache2.svg?branch=dev)](https://travis-ci.org/codenamephp/chef.cookbook.apache2)
 
 Cookbook to install apache2 as a wrapper coockbook for [Apache2][apache2_github]
 

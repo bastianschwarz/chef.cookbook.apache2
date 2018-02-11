@@ -1,4 +1,4 @@
-name 'chef.cookbook.apache2'
+name 'codenamephp_apache2'
 maintainer 'Bastian Schwarz'
 maintainer_email 'bastian@codename-php.de'
 license 'Apache-2.0'

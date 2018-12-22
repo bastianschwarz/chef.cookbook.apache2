@@ -5,6 +5,8 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 include_recipe 'apt'
-include_recipe 'apache2'
+include_recipe 'apache2::default'
+include_recipe 'apache2::mod_ssl'
 
-apache_site 'default-ssl' if node['apache']['default_site_enabled'] == true
+apache_site 'default-ssl'
+apache_conf 'default_access'

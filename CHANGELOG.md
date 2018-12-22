@@ -1,12 +1,15 @@
 # Change Log
 
-## [Unreleased](https://github.com/codenamephp/chef.cookbook.apache2/tree/HEAD)
-
-[Full Changelog](https://github.com/codenamephp/chef.cookbook.apache2/compare/v1.0.0...HEAD)
+## [v1.0.1](https://github.com/codenamephp/chef.cookbook.apache2/tree/v1.0.1) (2018-12-22)
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.apache2/compare/v1.0.0...v1.0.1)
 
 **Implemented enhancements:**
 
 - Rework default recipe [\#4](https://github.com/codenamephp/chef.cookbook.apache2/issues/4)
+
+**Merged pull requests:**
+
+- \[RELEASE 1.0.1\] [\#6](https://github.com/codenamephp/chef.cookbook.apache2/pull/6) ([bastianschwarz](https://github.com/bastianschwarz))
 
 ## [v1.0.0](https://github.com/codenamephp/chef.cookbook.apache2/tree/v1.0.0) (2018-02-11)
 **Implemented enhancements:**

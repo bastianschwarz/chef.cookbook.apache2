@@ -2,9 +2,6 @@ driver:
   name: dokken
   privileged: true # because Docker and SystemD/Upstart
   chef_version: current
-  ports:
-    - '8080:80' #needed for http tests since inspec executes locally
-    - '8443:443' #needed for http tests since inspec executes locally
 
 transport:
   name: dokken

@@ -1,4 +1,5 @@
 # Chef Cookbook Apache2
+[![Build Status](https://travis-ci.org/codenamephp/chef.cookbook.apache2.svg?branch=dev)](https://travis-ci.org/codenamephp/chef.cookbook.apache2)
 
 Cookbook to install apache2 as a wrapper coockbook for [Apache2][apache2_github]
 
@@ -37,12 +38,5 @@ add the corresponding `apache2::*` cookbooks for that module
   ]
 }
 ```
-
-### Attributes
-
-#### Overwrites
-
-By default, the `default['apache']['listen']` is set to `['*:80', '*:443']` to listen to both http and https
-and therefore `default['apache']['default_modules']` is extended with `['ssl']` so mod_ssl module is activated by default.
 
 [apache2_github]: https://github.com/sous-chefs/apache2

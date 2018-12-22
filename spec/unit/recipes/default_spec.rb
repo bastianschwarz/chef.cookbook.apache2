@@ -13,10 +13,6 @@ describe 'codenamephp_apache2::default' do
       runner.converge(described_recipe)
     end
 
-    before do
-      stub_command('/usr/sbin/apache2 -t').and_return(true)
-    end
-
     it 'converges successfully' do
       expect { chef_run }.to_not raise_error
     end
@@ -24,34 +20,13 @@ describe 'codenamephp_apache2::default' do
     it 'includes apt recipe' do
       expect(chef_run).to include_recipe('apt')
     end
-    it 'includes apache2 recipe' do
-      expect(chef_run).to include_recipe('apache2')
+
+    it 'installs apache using default recipe' do
+      expect(chef_run).to include_recipe('apache2::default')
     end
 
-    it 'enables default ssl site' do
-      allow(File).to receive(:exist?).and_return(true)
-      expect(chef_run).to enable_site('default-ssl')
-    end
-  end
-
-  context 'When default_site_enabled is set to false' do
-    let(:chef_run) do
-      ChefSpec::SoloRunner.new do |node|
-        node.override['apache']['default_site_enabled'] = false
-      end.converge(described_recipe)
-    end
-
-    before do
-      stub_command('/usr/sbin/apache2 -t').and_return(true)
-    end
-
-    it 'converges successfully' do
-      expect { chef_run }.to_not raise_error
-    end
-
-    it 'enables default ssl site' do
-      allow(File).to receive(:exist?).and_return(true)
-      expect(chef_run).to_not enable_site('default-ssl')
+    it 'installs ssl using mod_ssl recipe' do
+      expect(chef_run).to include_recipe('apache2::mod_ssl')
     end
   end
 end

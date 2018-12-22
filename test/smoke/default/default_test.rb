@@ -1,5 +1,3 @@
-# # encoding: utf-8
-
 # Inspec test for recipe codenamephp_apache2::default
 
 # The Inspec reference, with examples and extensive documentation, can be
@@ -16,15 +14,13 @@ control 'apache2-1.0' do
   end
 
   describe apache_conf do
-    its('Listen') { should eq ['*:443', '*:80'] }
+    its('Listen') { should eq %w[*:80 *:443] }
   end
 
-  # test is executed locally, so inspec calls the host machine, mapped to port 80 on the guest in kitchen
-  describe http('http://localhost:8080') do
+  describe http('http://localhost') do
     its('status') { should cmp 200 }
   end
-  # test is executed locally, so inspec calls the host machine, mapped to port 443 on the guest in kitchen
-  describe http('https://localhost:8443', ssl_verify: false) do
+  describe http('https://localhost:443', ssl_verify: false) do
     its('status') { should cmp 200 }
   end
 end

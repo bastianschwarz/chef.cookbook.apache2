@@ -1,9 +1,6 @@
 ---
 driver:
   name: vagrant
-  network:
-    - ["forwarded_port", {guest: 80, host: 8080}] #needed for http tests since inspec executes locally
-    - ["forwarded_port", {guest: 443, host: 8443, auto_correct: true}] #needed for http tests since inspec executes locally
 
 provisioner:
   name: chef_solo
@@ -12,7 +9,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: debian-9.1
+  - name: debian-9.4
 
 suites:
   - name: default

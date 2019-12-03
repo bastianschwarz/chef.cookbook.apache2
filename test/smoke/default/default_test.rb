@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Inspec test for recipe codenamephp_apache2::default
 
 # The Inspec reference, with examples and extensive documentation, can be
@@ -14,7 +16,7 @@ control 'apache2-1.0' do
   end
 
   describe apache_conf do
-    its('Listen') { should eq %w[*:80 *:443] }
+    its('Listen') { should eq %w[80 443] }
   end
 
   describe http('http://localhost') do

@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/codenamephp/chef.cookbook.apache2/tree/HEAD)
+## [2.0.0](https://github.com/codenamephp/chef.cookbook.apache2/tree/2.0.0) (2019-12-03)
 
-[Full Changelog](https://github.com/codenamephp/chef.cookbook.apache2/compare/v1.0.1...HEAD)
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.apache2/compare/v1.0.1...2.0.0)
 
 **Implemented enhancements:**
 

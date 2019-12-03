@@ -21,11 +21,11 @@ def origin_branch
 end
 
 def changelog_user
-  ENV['CHANGELOG_USER'].presence  'codenamephp'
+  ENV['CHANGELOG_USER'].presence 'codenamephp'
 end
 
 def changelog_prject
-  ENV['CHANGELOG_PROJECT'].presence  'chef.cookbook.apache2'
+  ENV['CHANGELOG_PROJECT'].presence 'chef.cookbook.apache2'
 end
 
 task default: %w[style integration]
@@ -121,7 +121,10 @@ namespace :documentation do
       sh "git clone 'https://#{ENV['GH_TOKEN']}@github.com/#{ENV['TRAVIS_REPO_SLUG']}.git' --branch #{origin_branch} --single-branch #{branch_repo}"
     end
     Dir.chdir(branch_repo) do
-      sh format("github_changelog_generator -u #{changelog_user} -p #{changelog_prject}  -t #{ENV['GH_TOKEN']} %<version>s", version: ("--future-release #{version_match[1]}" unless version_match.nil?))
+      sh format("github_changelog_generator -u #{changelog_user} -p #{changelog_prject}  -t #{ENV['GH_TOKEN']} %<version>s", version: (
+        unless version_match.nil? "--future-release #{version_match[1]}"
+        end
+      ))
       sh 'git diff --exit-code CHANGELOG.md' do |ok|
         sh 'git add CHANGELOG.md && git commit --allow-empty -m"[skip ci] Updated changelog" && git push origin ' + origin_branch unless ok
       end

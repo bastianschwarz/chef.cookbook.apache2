@@ -9,9 +9,8 @@ verifier:
   name: inspec
 
 platforms:
-  - name: debian-9.4
   - name: debian-10
-  
+
 suites:
   - name: default
     run_list:

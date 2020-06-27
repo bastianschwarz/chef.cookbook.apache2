@@ -11,7 +11,7 @@ chef_version '>= 13.0' if respond_to?(:chef_version)
 issues_url 'https://github.com/codenamephp/chef.cookbook.apache2/issues' if respond_to?(:issues_url)
 source_url 'https://github.com/codenamephp/chef.cookbook.apache2' if respond_to?(:source_url)
 
-supports 'debian', '~>9.1'
+supports 'debian', '~> 10.0'
 
 depends 'apt'
 depends 'apache2', '~> 8.0'

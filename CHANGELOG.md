@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.0.1](https://github.com/codenamephp/chef.cookbook.apache2/tree/2.0.1) (2020-06-28)
+
+[Full Changelog](https://github.com/codenamephp/chef.cookbook.apache2/compare/v2.0.0...2.0.1)
+
+**Merged pull requests:**
+
+- Updated build files [\#9](https://github.com/codenamephp/chef.cookbook.apache2/pull/9) ([bastianschwarz](https://github.com/bastianschwarz))
+- \[skip-ci\] Removing dev branch [\#8](https://github.com/codenamephp/chef.cookbook.apache2/pull/8) ([bastianschwarz](https://github.com/bastianschwarz))
+
 ## [2.0.0](https://github.com/codenamephp/chef.cookbook.apache2/tree/2.0.0) (2019-12-03)
 
 [Full Changelog](https://github.com/codenamephp/chef.cookbook.apache2/compare/v1.0.1...2.0.0)
